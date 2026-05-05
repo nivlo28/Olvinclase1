@@ -17,7 +17,9 @@ export default function App() {
       title={"Secondary Button"}
        onPress={()=>{
         console.log('Press desde boton Secundario');
-      }}/>
+      }}
+      variant="tertiary"
+      />
     </View>
   );
 }
@@ -25,7 +27,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e30505',
+    backgroundColor: '#f7f8f7',
     alignItems: 'center',
     justifyContent: 'center',
   },
