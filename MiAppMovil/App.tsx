@@ -2,16 +2,21 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import CustomButton from './src/components/CustomButton';
 import CustomInput from './src/components/CustomInput';
+import { useState } from 'react';
 
 export default function App() {
+  //definicion de una variable de estado en ReactN
+  const [inputText, setInputText]= useState("maria");
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
-      <CustomInput type={'number'} 
+
+      <CustomInput 
+      type={'number'} 
       placeholder={''} 
-      value={''}
-       onChange={function (text: string): void {} } />
+      value={inputText}
+       onChange={setInputText } />
       <CustomButton 
       title={"App"}
        onPress={()=>{
@@ -35,6 +40,7 @@ export default function App() {
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
